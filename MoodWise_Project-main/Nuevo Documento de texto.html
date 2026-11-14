@@ -1,0 +1,397 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mi historia y desarrollo profesional</title>
+<style>
+:root{
+--bg:#0b1220;--panel:#17263d;--text:#f3f6fc;
+--muted:#bdc9d9;--accent:#62d6c8;--blue:#8ca9ff;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);
+font-family:Segoe UI,Arial,sans-serif;overflow:hidden}
+.slide{
+display:none;height:100vh;width:100%;padding:6vw;
+padding-bottom:100px;overflow-y:auto;
+background:radial-gradient(circle at 90% 10%,#17434a66,transparent 35%),
+radial-gradient(circle at 5% 90%,#283e7066,transparent 35%),var(--bg)
+}
+.slide.active{display:flex;flex-direction:column;justify-content:center;
+animation:fade .3s ease}
+@keyframes fade{from{opacity:.3;transform:translateY(8px)}
+to{opacity:1;transform:none}}
+.kicker{color:var(--accent);font-weight:bold;letter-spacing:3px;
+font-size:13px;margin-bottom:20px}
+h1{font-size:clamp(40px,6vw,78px);line-height:1.05;margin:0 0 25px}
+h2{font-size:clamp(30px,4vw,50px);margin:0 0 22px}
+h3{color:var(--accent);margin-top:0}
+p{color:var(--muted);font-size:clamp(16px,1.4vw,19px);line-height:1.65}
+.accent{color:var(--accent)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);
+gap:16px;margin-top:15px;max-width:1150px}
+.grid.three{grid-template-columns:repeat(3,1fr)}
+.card{background:linear-gradient(145deg,#17263d,#20334e);
+border:1px solid #ffffff20;border-radius:17px;padding:21px}
+.card p{font-size:15px;margin-bottom:0}
+ul{color:var(--muted);line-height:1.7;padding-left:22px}
+li{margin-bottom:4px}
+.quote{border-left:4px solid var(--accent);padding:12px 20px;
+background:#62d6c815;border-radius:0 12px 12px 0;margin:20px 0}
+.quote p{color:white;font-size:21px;margin:0}
+.tag{display:inline-block;border:1px solid #ffffff30;
+padding:8px 13px;border-radius:30px;margin:5px;color:var(--muted)}
+.foda{display:grid;grid-template-columns:1fr 1fr;gap:13px;max-width:1150px}
+.foda .card{min-height:150px}
+.footer{position:fixed;bottom:0;left:0;right:0;height:70px;
+display:flex;align-items:center;justify-content:space-between;
+padding:0 20px;background:#080e19ee;border-top:1px solid #ffffff20}
+button{background:#1d304b;color:white;border:1px solid #ffffff30;
+padding:10px 15px;border-radius:9px;cursor:pointer}
+button:hover{border-color:var(--accent)}
+#counter{color:var(--muted)}
+.progress{position:fixed;bottom:70px;height:4px;width:100%;background:#26354b}
+#bar{height:100%;background:var(--accent);width:0;transition:.3s}
+@media(max-width:700px){
+.slide{padding:25px 20px 100px;justify-content:flex-start}
+.grid,.grid.three,.foda{grid-template-columns:1fr}
+.footer{padding:0 6px}
+}
+@media print{
+body{overflow:visible}
+.slide{display:flex!important;position:relative;height:auto;min-height:100vh;
+page-break-after:always;background:white;color:#111}
+.slide p,.slide li{color:#333}
+.card{background:#f0f3f7}
+.quote p{color:#111}
+.footer,.progress{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- 1. PORTADA -->
+<section class="slide active">
+<div class="kicker">DESARROLLO DE HABILIDADES INTRAPERSONALES</div>
+<h1>Mi historia,<br><span class="accent">mis aprendizajes</span><br>y mi transformación</h1>
+<p>Una mirada a mi historia de vida, mis capacidades, mis debilidades y las decisiones que estoy tomando para convertirme en una mejor versión de mí mismo.</p>
+<div>
+<span class="tag">Luis</span>
+<span class="tag">Egresado de Ingeniería Mecánica</span>
+<span class="tag">Aprendizaje continuo</span>
+</div>
+<p>2026 · Reflexión personal</p>
+</section>
+
+<!-- 2. QUIEN SOY -->
+<section class="slide">
+<div class="kicker">01 · AUTOCONOCIMIENTO</div>
+<h2>¿Quién soy?</h2>
+<p>Soy Luis, egresado de Ingeniería Mecánica. Me gusta la tecnología, la ciencia y aprender sobre diferentes temas. Me considero una persona inteligente, analítica y curiosa. A veces puedo llegar a obsesionarme con determinados temas cuando despiertan mi interés.</p>
+<div class="grid three">
+<div class="card">
+<h3>Mi personalidad</h3>
+<p>Soy introvertido, tímido y de pocas palabras. Prefiero observar y analizar antes de intervenir.</p>
+</div>
+<div class="card">
+<h3>Mis capacidades</h3>
+<p>Tengo facilidad para aprender rápidamente, comprender conceptos y buscar soluciones a problemas.</p>
+</div>
+<div class="card">
+<h3>Mis valores</h3>
+<p>Me considero empático, especialmente con los animales. También procuro actuar de manera práctica y responsable.</p>
+</div>
+</div>
+<div class="quote"><p>Quiero utilizar este curso para conocerme mejor y construir una mejor versión de mí mismo.</p></div>
+</section>
+
+<!-- 3. HISTORIA -->
+<section class="slide">
+<div class="kicker">02 · MI HISTORIA DE VIDA</div>
+<h2>Mis primeros años</h2>
+<p>Nací y crecí en un pueblo joven que recién comenzaba a desarrollarse. Mi familia tenía recursos económicos limitados y, cuando era pequeño, nuestra zona todavía carecía de servicios básicos como electricidad, agua y pistas asfaltadas. Con el tiempo, estos servicios fueron llegando progresivamente.</p>
+<div class="grid">
+<div class="card">
+<h3>Mi infancia</h3>
+<p>Estudié en colegios locales relativamente cercanos a mi casa. Siempre iba caminando. Desde pequeño aprendí a leer más rápido que mis compañeros y mis profesores identificaron mi facilidad para el razonamiento matemático.</p>
+</div>
+<div class="card">
+<h3>Mi adolescencia</h3>
+<p>Disfruté mi etapa escolar, pero descubrí una dificultad: cuando las cosas resultan demasiado fáciles, uno puede acostumbrarse a no esforzarse. No desarrollé los hábitos de estudio que posteriormente necesitaría.</p>
+</div>
+</div>
+<div class="quote"><p>Aprendí que tener facilidad para aprender no significa que siempre esté preparado para enfrentar cualquier desafío.</p></div>
+</section>
+
+<!-- 4. SUPERACION -->
+<section class="slide">
+<div class="kicker">03 · SUPERACIÓN PERSONAL</div>
+<h2>Los retos también forman nuestro carácter</h2>
+<p>Al terminar el colegio descubrí que mi preparación no era suficiente para ingresar a una universidad pública. Fue una experiencia que me hizo comprender las consecuencias de no haber desarrollado hábitos de estudio.</p>
+<div class="grid three">
+<div class="card">
+<h3>El primer reto</h3>
+<p>Reconocer que necesitaba mejorar mi preparación académica y dedicar más esfuerzo.</p>
+</div>
+<div class="card">
+<h3>La decisión</h3>
+<p>Estudié durante un año en una academia para fortalecer mis conocimientos.</p>
+</div>
+<div class="card">
+<h3>El resultado</h3>
+<p>Logré ingresar a Ingeniería Mecánica en la Universidad Nacional de San Agustín, una oportunidad importante considerando las posibilidades económicas de mi familia.</p>
+</div>
+</div>
+<div class="quote"><p>Esta experiencia me enseñó que la capacidad necesita disciplina para convertirse en resultados.</p></div>
+</section>
+
+<!-- 5. EXPERIENCIAS PERSONALES -->
+<section class="slide">
+<div class="kicker">04 · EXPERIENCIAS QUE ME DEFINEN</div>
+<h2>Más allá de los estudios</h2>
+<div class="grid three">
+<div class="card">
+<h3>Empatía</h3>
+<p>Rescato gatos de la calle y procuro ayudarlos. En ocasiones, esta decisión ha afectado mis finanzas personales, pero considero importante actuar con empatía hacia los animales.</p>
+</div>
+<div class="card">
+<h3>Emprendimiento</h3>
+<p>Abrí un pequeño negocio junto a mi padre. Esta experiencia me permitió conocer otras responsabilidades y la importancia de trabajar para sacar adelante un proyecto.</p>
+</div>
+<div class="card">
+<h3>Desarrollo profesional</h3>
+<p>Conseguí un trabajo relacionado con mi carrera poco después de egresar. Esto me permitió aplicar conocimientos de Ingeniería en situaciones reales.</p>
+</div>
+</div>
+<p>Estas experiencias muestran que mi desarrollo no se ha limitado al ámbito académico. También he aprendido mediante el trabajo, la familia, las decisiones personales y las responsabilidades que he asumido.</p>
+</section>
+
+<!-- 6. COMO SOY PROFESIONAL -->
+<section class="slide">
+<div class="kicker">05 · MI ROL COMO PROFESIONAL</div>
+<h2>Cómo mi historia influye en mi trabajo</h2>
+<p>Mi infancia y adolescencia contribuyeron a formar una personalidad que busca soluciones y no se rinde fácilmente ante los problemas. Soy analítico y puedo concentrarme intensamente cuando algo me interesa.</p>
+<div class="grid">
+<div class="card">
+<h3>Lo que he desarrollado</h3>
+<ul>
+<li>Capacidad para analizar problemas.</li>
+<li>Iniciativa para encontrar soluciones.</li>
+<li>Organización en mis actividades laborales.</li>
+<li>Perseverancia y orientación a resultados.</li>
+</ul>
+</div>
+<div class="card">
+<h3>Lo que debo reconocer</h3>
+<ul>
+<li>Mi facilidad para aprender me llevó a subestimar el esfuerzo necesario.</li>
+<li>Confiaba demasiado en mi memoria.</li>
+<li>Mi individualismo dificultaba el trabajo en equipo.</li>
+<li>La procrastinación reducía mi rendimiento.</li>
+</ul>
+</div>
+</div>
+<div class="quote"><p>Hoy soy más organizado y responsable que durante mi etapa universitaria. El trabajo me ha obligado a convertir mis capacidades en resultados concretos.</p></div>
+</section>
+
+<!-- 7. FORTALEZAS Y DEBILIDADES -->
+<section class="slide">
+<div class="kicker">06 · REFLEXIÓN Y MATRIZ FODA</div>
+<h2>Conocer mis fortalezas y debilidades</h2>
+<div class="foda">
+<div class="card">
+<h3>FORTALEZAS</h3>
+<ul>
+<li>Inteligencia y razonamiento analítico.</li>
+<li>Aprendizaje rápido.</li>
+<li>Obstinación para alcanzar resultados.</li>
+<li>Organización y proactividad actuales.</li>
+</ul>
+<p><b>Justificación:</b> me permiten comprender problemas, adaptarme a situaciones nuevas y encontrar soluciones con autonomía.</p>
+</div>
+<div class="card">
+<h3>OPORTUNIDADES</h3>
+<ul>
+<li>Experiencia laboral relacionada con mi carrera.</li>
+<li>Acceso a tecnología y recursos de aprendizaje.</li>
+<li>Posibilidad de seguir estudiando.</li>
+<li>Desarrollo de herramientas informáticas para organizar mis actividades.</li>
+</ul>
+</div>
+<div class="card">
+<h3>DEBILIDADES</h3>
+<ul>
+<li>Procrastinación.</li>
+<li>Falta de puntualidad en algunas ocasiones.</li>
+<li>Individualismo y dificultad para pedir ayuda.</li>
+<li>Desorden y falta de registros.</li>
+</ul>
+<p><b>Justificación:</b> reducen mi potencial y afectan mi rendimiento y la coordinación con las personas de mi entorno.</p>
+</div>
+<div class="card">
+<h3>AMENAZAS</h3>
+<ul>
+<li>No conseguir empleo o perder estabilidad laboral.</li>
+<li>No terminar la nueva carrera que estoy cursando.</li>
+<li>Dificultades económicas en la empresa donde trabajo.</li>
+<li>Falta de tiempo para cumplir mis diferentes responsabilidades.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- 8. POR QUE MEJORAR -->
+<section class="slide">
+<div class="kicker">07 · MIS ASPECTOS POR MEJORAR</div>
+<h2>Mi mayor obstáculo: confiar demasiado en el tiempo</h2>
+<p>Uno de mis principales defectos es pensar que siempre tengo tiempo y que puedo realizar cualquier actividad rápidamente. Esta forma de pensar me lleva a postergar tareas, retrasar entregas y no avanzar todo lo que podría.</p>
+<div class="grid">
+<div class="card">
+<h3>Responsabilidad y puntualidad</h3>
+<p>Necesito dejar de depender de la presión de las fechas límite. Postergar actividades reduce mi capacidad de planificación y puede generar consecuencias para otras personas.</p>
+</div>
+<div class="card">
+<h3>Individualismo</h3>
+<p>Suelo confiar demasiado en mis propias capacidades y pedir poca ayuda. Esto puede parecer una ventaja, pero debilita el trabajo en equipo y las organizaciones a las que pertenezco.</p>
+</div>
+<div class="card">
+<h3>Desorganización</h3>
+<p>Durante mucho tiempo confié en mi memoria y no llevé registros adecuados. Esto perjudicó mi rendimiento académico y dificultó el seguimiento de mis tareas.</p>
+</div>
+<div class="card">
+<h3>¿Por qué cambiar?</h3>
+<p>Porque no basta con tener capacidad. Necesito desarrollar hábitos que me permitan aprovecharla y evitar que mis defectos limiten mis oportunidades.</p>
+</div>
+</div>
+</section>
+
+<!-- 9. OBJETIVO -->
+<section class="slide">
+<div class="kicker">08 · MI OBJETIVO DE MEJORA</div>
+<h2>Convertir la organización en un hábito</h2>
+<p class="lead">Mi objetivo es desarrollar un sistema personal de organización y seguimiento de actividades que me permita mejorar mi responsabilidad, puntualidad, constancia y productividad.</p>
+<div class="grid">
+<div class="card">
+<h3>¿Por qué elegí este objetivo?</h3>
+<p>Porque la desorganización y la procrastinación son debilidades que afectan directamente mi potencial. Si puedo medir mis avances, identificar mis fallas y corregirlas, podré mejorar mi rendimiento académico, laboral y personal.</p>
+</div>
+<div class="card">
+<h3>¿Qué fortaleza aprovecharé?</h3>
+<p>Mi capacidad analítica y mi interés por la tecnología. Puedo utilizar herramientas informáticas para convertir un problema de organización en un proceso que pueda medir y mejorar.</p>
+</div>
+</div>
+<div class="quote"><p>No quiero depender de recordar todo o de trabajar bajo presión. Quiero tener un método que me ayude a cumplir mis objetivos.</p></div>
+</section>
+
+<!-- 10. ESTRATEGIA -->
+<section class="slide">
+<div class="kicker">09 · MI ESTRATEGIA</div>
+<h2>La solución que ya estoy poniendo en práctica</h2>
+<p>En mi trabajo ya he comenzado a aplicar este cambio. Desarrollé un sistema informático para organizar mis actividades y llevar un control de los procesos que realizo.</p>
+<div class="grid three">
+<div class="card">
+<h3>01. Registrar</h3>
+<p>Crear actividades sencillas y registrar mis compromisos en un sistema escrito, en lugar de confiar exclusivamente en mi memoria.</p>
+</div>
+<div class="card">
+<h3>02. Ejecutar</h3>
+<p>Establecer prioridades, cumplir las actividades programadas y avanzar progresivamente en mis objetivos.</p>
+</div>
+<div class="card">
+<h3>03. Medir</h3>
+<p>Registrar mi cumplimiento y las horas productivas para conocer mi rendimiento real.</p>
+</div>
+<div class="card">
+<h3>04. Identificar</h3>
+<p>Analizar los resultados para reconocer mis puntos débiles y las actividades que estoy postergando.</p>
+</div>
+<div class="card">
+<h3>05. Mejorar</h3>
+<p>Establecer acciones específicas para corregir los problemas identificados y revisar periódicamente mis avances.</p>
+</div>
+<div class="card">
+<h3>06. Replicar</h3>
+<p>Trasladar el mismo método que utilizo en el trabajo a mis estudios y mi vida personal.</p>
+</div>
+</div>
+</section>
+
+<!-- 11. RESULTADOS Y REFLEXION -->
+<section class="slide">
+<div class="kicker">10 · TRANSFORMACIÓN</div>
+<h2>De trabajar como venga a trabajar con un sistema</h2>
+<p>La experiencia de desarrollar mi propio sistema informático me ha permitido comprobar que la organización puede cambiar la manera en que realizo mis actividades.</p>
+<div class="grid">
+<div class="card">
+<h3>Antes</h3>
+<ul>
+<li>Confiaba en mi memoria.</li>
+<li>Postergaba actividades.</li>
+<li>Trabajaba sin un seguimiento claro.</li>
+<li>Dependía demasiado de mi capacidad para resolver las cosas rápidamente.</li>
+</ul>
+</div>
+<div class="card">
+<h3>Ahora</h3>
+<ul>
+<li>Registro y organizo mis actividades.</li>
+<li>Tengo la información disponible.</li>
+<li>Realizo seguimiento de mis pendientes.</li>
+<li>Entrego mis actividades laborales a tiempo.</li>
+</ul>
+</div>
+</div>
+<div class="quote"><p>Mi intención es aplicar este mismo proceso a toda mi vida: organizar, ejecutar, medir, identificar problemas y mejorar.</p></div>
+</section>
+
+<!-- 12. FINAL -->
+<section class="slide">
+<div class="kicker">11 · REFLEXIÓN FINAL</div>
+<h2>Mi potencial no tiene que quedarse en una posibilidad</h2>
+<p>Al mirar mi historia, comprendo que muchas de mis características actuales tienen relación con las experiencias que he vivido. Mi infancia despertó mi capacidad de análisis, mi formación universitaria me dio conocimientos y mis experiencias laborales me enseñaron la importancia de la organización y la responsabilidad.</p>
+<p>También he comprendido que mis principales limitaciones no son la falta de inteligencia o capacidad, sino determinados hábitos que necesito corregir.</p>
+<p>Este curso ha sido importante porque me permitió analizarme, reconocer mis fortalezas y aceptar mis debilidades. Conocerme mejor me da herramientas para tomar decisiones y construir cambios reales.</p>
+<div class="quote">
+<p>Mi objetivo ya no es solamente aprender rápido. Es aprender a organizarme, trabajar mejor con los demás y llevar cada una de mis capacidades hasta su verdadero potencial.</p>
+</div>
+<h3>Gracias por su atención.</h3>
+</section>
+
+<div class="progress"><div id="bar"></div></div>
+<footer class="footer">
+<button onclick="change(-1)">← Anterior</button>
+<span id="counter">1 / 12</span>
+<button onclick="change(1)">Siguiente →</button>
+<button onclick="window.print()">Guardar PDF</button>
+</footer>
+
+<script>
+const slides=document.querySelectorAll('.slide');
+let current=0;
+
+function show(n){
+current=Math.max(0,Math.min(n,slides.length-1));
+slides.forEach((s,i)=>s.classList.toggle('active',i===current));
+document.getElementById('counter').textContent=
+(current+1)+' / '+slides.length;
+document.getElementById('bar').style.width=
+((current+1)/slides.length*100)+'%';
+}
+function change(n){show(current+n)}
+
+document.addEventListener('keydown',e=>{
+if(e.key==='ArrowRight'||e.key===' '){
+e.preventDefault();change(1);
+}
+if(e.key==='ArrowLeft')change(-1);
+if(e.key==='Home')show(0);
+if(e.key==='End')show(slides.length-1);
+});
+
+show(0);
+</script>
+</body>
+</html>
+

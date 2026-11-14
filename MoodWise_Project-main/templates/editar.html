@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar producto</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<main class="contenedor">
+
+    <header>
+        <h1>Editar producto</h1>
+        <p class="subtitulo">Modificar información del inventario</p>
+    </header>
+
+    <section class="panel">
+
+        <form method="POST" class="formulario vertical">
+
+            <label>
+                ID del producto
+                <input type="text" value="{{ producto.id }}" disabled>
+            </label>
+
+            <label>
+                Descripción
+                <input type="text" name="descripcion"
+                       value="{{ producto.descripcion }}" required>
+            </label>
+
+            <label>
+                Stock
+                <input type="number" name="stock"
+                       min="0" value="{{ producto.stock }}" required>
+            </label>
+
+            <button type="submit">Guardar cambios</button>
+
+            <a href="{{ url_for('index') }}">Volver al inventario</a>
+
+        </form>
+
+    </section>
+
+</main>
+
+</body>
+</html>

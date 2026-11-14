@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<main class="contenedor">
+
+    <header>
+        <p class="etiqueta">STOCK DE ALMACÉN</p>
+        <h1>Inventario</h1>
+        <p class="subtitulo">Registro y control de productos</p>
+    </header>
+
+    {% with mensajes = get_flashed_messages(with_categories=true) %}
+        {% for tipo, mensaje in mensajes %}
+            <div class="alerta {{ tipo }}">{{ mensaje }}</div>
+        {% endfor %}
+    {% endwith %}
+
+    <section class="resumen">
+        <div class="tarjeta">
+            <span>Productos registrados</span>
+            <strong>{{ total_productos }}</strong>
+        </div>
+
+        <div class="tarjeta">
+            <span>Stock total</span>
+            <strong>{{ stock_total }}</strong>
+        </div>
+    </section>
+
+    <section class="panel">
+        <h2>Registrar producto</h2>
+
+        <form method="POST" class="formulario">
+
+            <label>
+                ID del producto
+                <input type="text" name="id"
+                       placeholder="Ej. REP-001" required>
+            </label>
+
+            <label>
+                Descripción
+                <input type="text" name="descripcion"
+                       placeholder="Nombre del producto" required>
+            </label>
+
+            <label>
+                Stock
+                <input type="number" name="stock"
+                       min="0" step="1" placeholder="0" required>
+            </label>
+
+            <button type="submit">+ Registrar</button>
+
+        </form>
+    </section>
+
+    <section class="panel">
+        <h2>Productos registrados</h2>
+
+        <form method="GET" class="buscador">
+            <input type="search" name="buscar"
+                   value="{{ buscar }}"
+                   placeholder="Buscar por ID o descripción">
+            <button type="submit">Buscar</button>
+            <a href="{{ url_for('index') }}">Limpiar</a>
+        </form>
+
+        <div class="tabla-contenedor">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Descripción</th>
+                        <th>Stock</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {% for p in productos %}
+                    <tr>
+                        <td class="codigo">{{ p.id }}</td>
+                        <td>{{ p.descripcion }}</td>
+                        <td>{{ p.stock }}</td>
+                        <td class="acciones">
+
+                            <a href="{{ url_for('editar', producto_id=p.id) }}">
+                                Editar
+                            </a>
+
+                            <form method="POST"
+                                  action="{{ url_for('eliminar', producto_id=p.id) }}"
+                                  onsubmit="return confirm('¿Eliminar producto?')">
+
+                                <button type="submit" class="eliminar">
+                                    Eliminar
+                                </button>
+                            </form>
+
+                        </td>
+                    </tr>
+                    {% else %}
+                    <tr>
+                        <td colspan="4" class="vacio">
+                            No hay productos registrados.
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</main>
+
+</body>
+</html>
